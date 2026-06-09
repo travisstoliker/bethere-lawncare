@@ -7,8 +7,8 @@
   <meta name="description" content="Be There Lawncare provides reliable lawn care and snow removal services in Haslett, MI. From routine maintenance to custom preferences, we deliver exceptional results.">
   <meta property="og:title" content="Be There Lawncare | Haslett, MI">
   <meta property="og:description" content="Reliable lawn care and snow removal. Year-round service. Call (517) 763-3233.">
-  <meta property="og:image" content="https://betherelawncare.com/hero.jpg">
-  <meta property="og:url" content="https://betherelawncare.com">
+  <meta property="og:image" content="https://www.betherelawncare.com/hero.jpg">
+  <meta property="og:url" content="https://www.betherelawncare.com">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,17 +53,18 @@
       gap: 10px;
     }
     .nav-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      border-radius: 6px;
       overflow: hidden;
       flex-shrink: 0;
-      border: 2px solid rgba(255,255,255,0.3);
+      background: #fff;
+      padding: 3px;
     }
     .nav-icon img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
     .nav-name {
       font-family: 'Fraunces', Georgia, serif;
@@ -293,28 +294,48 @@
       padding: 72px 32px;
       text-align: center;
     }
-    .review-inner { max-width: 700px; margin: 0 auto; }
+    .review-inner { max-width: 960px; margin: 0 auto; }
+    .review-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 40px;
+    }
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      text-align: left;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 32px 28px;
+    }
     .stars {
-      font-size: 1.4rem;
-      letter-spacing: 4px;
-      margin-bottom: 24px;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
       color: var(--gold);
     }
     .review-text {
       font-family: 'Fraunces', Georgia, serif;
-      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
       font-style: italic;
       font-weight: 400;
       color: #fff;
       line-height: 1.5;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .reviewer {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.5);
     }
 
     /* ── ABOUT ── */
@@ -445,6 +466,7 @@
       .gallery-more { grid-template-columns: repeat(2, 1fr); }
       .gallery-more .gallery-item.wide { grid-column: span 2; }
       .about-inner { grid-template-columns: 1fr; gap: 36px; }
+      .review-grid { grid-template-columns: 1fr; }
       .about-image { display: none; }
       .contact-grid { grid-template-columns: 1fr; }
       .badge-strip { gap: 20px; padding: 16px 20px; }
@@ -612,12 +634,22 @@
     </div>
   </section>
 
-  <!-- REVIEW -->
+  <!-- REVIEWS -->
   <div class="review-section">
     <div class="review-inner">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"Very professional — the results speak for themselves."</p>
-      <p class="reviewer">— Randy Pierce, Haslett Resident</p>
+      <p class="review-eyebrow">What Customers Are Saying</p>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Very professional — the results speak for themselves."</p>
+          <p class="reviewer">— Randy Pierce, Haslett Resident</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Great communication and even better service."</p>
+          <p class="reviewer">— Andrew Wolfe</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -626,17 +658,17 @@
     <div class="section-inner">
       <div class="about-inner">
         <div class="about-image">
-          <img src="hero.jpg" alt="Beautifully maintained lawn by Be There Lawncare">
+          <img src="photo39.jpg" alt="Beautifully striped lawn maintained by Be There Lawncare">
         </div>
         <div class="about-text">
           <p class="section-label">About Us</p>
           <div class="gold-line"></div>
           <h2 class="section-title">We Show Up.<br>Every Time.</h2>
           <p class="section-lead">
-            At Be There Lawncare, reliability isn't just a promise — it's in our name. We provide lawn care and snow removal services to keep your yard top notch year-round, with results and customer satisfaction at the center of everything we do.
+            At Be There Lawncare, we provide reliable lawn care and snow removal services to keep your yard top notch year-round. From routine maintenance to custom preferences, our team is dedicated to delivering exceptional results and customer satisfaction.
           </p>
           <ul class="about-list">
-            <li>Consistent, scheduled service you can count on</li>
+            <li>Reliable, year-round service you can count on</li>
             <li>Custom preferences honored — your yard, your way</li>
             <li>Lawn mowing, edging, mulching &amp; seasonal cleanup</li>
             <li>Snow plowing and removal when winter arrives</li>
@@ -706,7 +738,7 @@
 
   <!-- FOOTER -->
   <footer>
-    © 2025 Be There Lawncare &nbsp;|&nbsp;
+    © 2026 Be There Lawncare &nbsp;|&nbsp;
     Haslett, MI &nbsp;|&nbsp;
     <a href="tel:5177633233">(517) 763-3233</a> &nbsp;|&nbsp;
     <a href="https://www.facebook.com/profile.php?id=61574088118190" target="_blank" rel="noopener">Facebook</a>
