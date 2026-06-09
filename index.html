@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be There Lawncare | Haslett, MI</title>
+  <meta name="description" content="Be There Lawncare provides reliable lawn care and snow removal services in Haslett, MI. From routine maintenance to custom preferences, we deliver exceptional results.">
+  <meta property="og:title" content="Be There Lawncare | Haslett, MI">
+  <meta property="og:description" content="Reliable lawn care and snow removal. Year-round service. Call (517) 763-3233.">
+  <meta property="og:image" content="https://betherelawncare.com/hero.jpg">
+  <meta property="og:url" content="https://betherelawncare.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark:  #1b3a22;
+      --green-mid:   #2d6a3f;
+      --green-light: #4a9460;
+      --cream:       #f7f4ee;
+      --gold:        #c8903a;
+      --text:        #1e1e1e;
+      --muted:       #5a6b5c;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--green-dark);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-icon {
+      width: 34px;
+      height: 34px;
+      background: var(--green-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .nav-name {
+      font-family: 'Fraunces', Georgia, serif;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: #fff; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: min(92vh, 720px);
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('hero.jpg') center/cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(15, 30, 18, 0.88) 0%,
+        rgba(15, 30, 18, 0.45) 50%,
+        rgba(15, 30, 18, 0.1) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 40px 60px;
+      max-width: 720px;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: rgba(255,255,255,0.82);
+      line-height: 1.6;
+      max-width: 520px;
+      margin-bottom: 32px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 26px;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      transition: transform 0.12s, box-shadow 0.12s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.22); }
+    .btn:active { transform: none; }
+    .btn-primary { background: var(--gold); color: #fff; }
+    .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.7); }
+    .btn-green { background: var(--green-mid); color: #fff; }
+
+    /* ── BADGE STRIP ── */
+    .badge-strip {
+      background: var(--green-dark);
+      padding: 18px 32px;
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .badge-icon { font-size: 1.1rem; }
+
+    /* ── SECTIONS ── */
+    section { padding: 72px 32px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: var(--green-dark);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ── SERVICES ── */
+    .services { background: #fff; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--cream);
+      border: 1px solid rgba(45,106,63,0.12);
+      border-radius: 8px;
+      padding: 28px 24px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .service-card:hover {
+      box-shadow: 0 8px 28px rgba(27,58,34,0.12);
+      transform: translateY(-3px);
+    }
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .service-card h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+    }
+    .service-card p {
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── GALLERY ── */
+    .gallery { background: var(--cream); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .gallery-grid .wide {
+      grid-column: span 2;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #c8e6c9;
+      aspect-ratio: 4/3;
+    }
+    .gallery-item.tall { aspect-ratio: 3/4; }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+
+    /* ── REVIEW ── */
+    .review-section {
+      background: var(--green-dark);
+      padding: 72px 32px;
+      text-align: center;
+    }
+    .review-inner { max-width: 700px; margin: 0 auto; }
+    .stars {
+      font-size: 1.4rem;
+      letter-spacing: 4px;
+      margin-bottom: 24px;
+      color: var(--gold);
+    }
+    .review-text {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-style: italic;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+    .reviewer {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ── ABOUT ── */
+    .about { background: #fff; }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-image {
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: #c8e6c9;
+    }
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .about-text .section-lead { margin-bottom: 32px; }
+    .about-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .about-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .about-list li::before {
+      content: '✓';
+      color: var(--green-light);
+      font-weight: 700;
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--cream); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--green-dark);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .contact-value {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--green-dark);
+    }
+    .contact-value a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .contact-value a:hover { color: var(--green-mid); }
+    .contact-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .contact-cta .section-title { margin-bottom: 8px; }
+    .contact-cta .section-lead { margin-bottom: 24px; }
+
+    /* ── DIVIDER ── */
+    .gold-line {
+      width: 48px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111c13;
+      color: rgba(255,255,255,0.42);
+      text-align: center;
+      padding: 24px 32px;
+      font-size: 0.76rem;
+      line-height: 1.7;
+    }
+    footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 12px 20px; }
+      .nav-links { display: none; }
+      .hero { height: min(85vh, 560px); }
+      .hero-content { padding: 0 24px 48px; }
+      section { padding: 56px 20px; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .gallery-grid .wide { grid-column: span 2; }
+      .about-inner { grid-template-columns: 1fr; gap: 36px; }
+      .about-image { display: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .badge-strip { gap: 20px; padding: 16px 20px; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-grid .wide { grid-column: span 1; }
+      .gallery-item.tall { aspect-ratio: 4/3; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <div class="nav-icon">🌿</div>
+      <span class="nav-name">Be There Lawncare</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Haslett, Michigan — Lawn Care & Snow Removal</p>
+      <h1>Your Yard,<br>Done Right.</h1>
+      <p class="hero-sub">
+        Reliable lawn care and snow removal services, year-round.
+        We're committed to exceptional results and your total satisfaction.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:5177633233" class="btn btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          (517) 763-3233
+        </a>
+        <a href="#gallery" class="btn btn-outline">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BADGE STRIP -->
+  <div class="badge-strip">
+    <div class="badge"><span class="badge-icon">✅</span> Year-Round Service</div>
+    <div class="badge"><span class="badge-icon">⭐</span> Customer Satisfaction Guaranteed</div>
+    <div class="badge"><span class="badge-icon">📍</span> Serving Haslett & Surrounding Areas</div>
+    <div class="badge"><span class="badge-icon">❄️</span> Lawn Care + Snow Removal</div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <p class="section-label">What We Do</p>
+      <div class="gold-line"></div>
+      <h2 class="section-title">Full-Service Lawn &amp; Landscape Care</h2>
+      <p class="section-lead">
+        From spring cleanup to winter plowing, we keep your property looking its best all year long — customized to your needs.
+      </p>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon">🌱</span>
+          <h3>Lawn Mowing &amp; Maintenance</h3>
+          <p>Precise, striped cuts with clean edging — every visit. We take pride in the details that make your yard stand out.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">❄️</span>
+          <h3>Snow Removal</h3>
+          <p>Dependable plowing and clearing when winter hits. We show up so you don't have to worry about driveways or walkways.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🍂</span>
+          <h3>Mulching &amp; Edging</h3>
+          <p>Clean bed edges and fresh mulch transform the curb appeal of any property. We make the details count.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">📅</span>
+          <h3>Seasonal Cleanups</h3>
+          <p>Spring and fall cleanups to clear debris, prep your lawn, and keep your landscape healthy through every season.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="section-inner">
+      <p class="section-label">Our Work</p>
+      <div class="gold-line"></div>
+      <h2 class="section-title">Results You Can See</h2>
+      <p class="section-lead">
+        Every lawn we touch gets our full attention. Here's a look at some recent jobs around Haslett.
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item wide">
+          <img src="hero.jpg" alt="Perfectly striped lawn with manicured mulch beds" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/717006755_122170895816802937_1610824849306251681_n.jpg?stp=dst-jpg_tt6&cstp=mx1152x2048&ctp=s1152x2048&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=I4aMMIcjcRMQ7kNvwHzMmzd&_nc_oc=AdoB2S7RD2yQHGI-zTYVC7IMsn8HgZDvNUeEejKiKffc46V7yLfz9u_6tVTVpCFIbo0&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=miryEW9OFmtzq3YApNYIXw&_nc_ss=7b2a8&oh=00_Af-Os8uEEv8v3Zrj1SYcQnQqzWWUkQLUvLhi2iT_A3vPIA&oe=6A2E4BB0" alt="Lawn care work" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/718419141_122170895828802937_618130190272288396_n.jpg?stp=dst-jpg_tt6&cstp=mx1152x2048&ctp=s1152x2048&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=LSh0EFfAkvIQ7kNvwFxXxK9&_nc_oc=Adpa0_vbMPy4nvoPdROz4bFM_g0bLiYn0kUHQJ2CcCTFonARy7m2t7gcQg1DxrHcUQQ&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=MoD4HQcJwPGkG_2TDLZ11A&_nc_ss=7b2a8&oh=00_Af_4j4gwPeh8Bjh99MSLlEC2VhiQbKOAB9uGKNGdmOR6gA&oe=6A2E40E4" alt="Lawn care work" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/715972156_122170895924802937_2512224075125516424_n.jpg?stp=dst-jpg_tt6&cstp=mx1152x2048&ctp=s1152x2048&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=wKG0JpCZQw0Q7kNvwEBSABr&_nc_oc=Adr8-qi2m6SPruHhKFBDOyqFm5IYE1JEcu5-tgc4X_-EJoyoriMQIweP3vswPXjgTIk&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=iBzHkLymLKQXCpvz26q0Yw&_nc_ss=7b2a8&oh=00_Af_LAqFRZ4Mk7g5c3yUsYnmfX7Sbda2xo_pcxhoRbhp4hA&oe=6A2E48B8" alt="Lawn care work" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/717219364_122170895858802937_5632407082123753276_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s1536x2048&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=UsiDp_WmyFgQ7kNvwHrzV1o&_nc_oc=AdqdNH0_2ChvcfbqCf79uMydAhdCJhlHvcKm6h566HaqOGeAr8gSapuLdVwlDaECXbo&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=-8aGp9HqFgTFL5VGLQ1p8Q&_nc_ss=7b2a8&oh=00_Af_fILb1AwLRsRvTgifC04i5f-s0gIAywJDSBwynIg5kvw&oe=6A2E470E" alt="Lawn care work" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEW -->
+  <div class="review-section">
+    <div class="review-inner">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Very professional — the results speak for themselves."</p>
+      <p class="reviewer">— Randy Pierce, Haslett Resident</p>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="about-inner">
+        <div class="about-image">
+          <img src="hero.jpg" alt="Beautifully maintained lawn by Be There Lawncare">
+        </div>
+        <div class="about-text">
+          <p class="section-label">About Us</p>
+          <div class="gold-line"></div>
+          <h2 class="section-title">We Show Up.<br>Every Time.</h2>
+          <p class="section-lead">
+            At Be There Lawncare, reliability isn't just a promise — it's in our name. We provide lawn care and snow removal services to keep your yard top notch year-round, with results and customer satisfaction at the center of everything we do.
+          </p>
+          <ul class="about-list">
+            <li>Consistent, scheduled service you can count on</li>
+            <li>Custom preferences honored — your yard, your way</li>
+            <li>Lawn mowing, edging, mulching &amp; seasonal cleanup</li>
+            <li>Snow plowing and removal when winter arrives</li>
+            <li>Locally owned and operated in Haslett, MI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-cta">
+          <p class="section-label">Get In Touch</p>
+          <div class="gold-line"></div>
+          <h2 class="section-title">Ready for a<br>Better Lawn?</h2>
+          <p class="section-lead">
+            Give us a call or send a message on Facebook. We'd love to talk about your property and set up a schedule that works for you.
+          </p>
+          <div>
+            <a href="tel:5177633233" class="btn btn-green" style="margin-right:12px; margin-bottom:12px;">
+              📞 Call Us Now
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61574088118190" target="_blank" rel="noopener" class="btn btn-outline" style="color: var(--green-dark); border-color: var(--green-dark);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Message on Facebook
+            </a>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 28px; padding-top: 16px;">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <p class="contact-label">Phone</p>
+              <p class="contact-value"><a href="tel:5177633233">(517) 763-3233</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <p class="contact-label">Email</p>
+              <p class="contact-value"><a href="mailto:betherelawncare@yahoo.com">betherelawncare@yahoo.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" style="background: #1877f2;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <div>
+              <p class="contact-label">Facebook</p>
+              <p class="contact-value"><a href="https://www.facebook.com/profile.php?id=61574088118190" target="_blank" rel="noopener">Be There Lawncare</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <p class="contact-label">Service Area</p>
+              <p class="contact-value">Haslett, MI &amp; Surrounding</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Be There Lawncare &nbsp;|&nbsp;
+    Haslett, MI &nbsp;|&nbsp;
+    <a href="tel:5177633233">(517) 763-3233</a> &nbsp;|&nbsp;
+    <a href="https://www.facebook.com/profile.php?id=61574088118190" target="_blank" rel="noopener">Facebook</a>
+  </footer>
+
+</body>
+</html>
