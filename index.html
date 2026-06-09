@@ -53,14 +53,17 @@
       gap: 10px;
     }
     .nav-icon {
-      width: 34px;
-      height: 34px;
-      background: var(--green-light);
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .nav-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .nav-name {
       font-family: 'Fraunces', Georgia, serif;
@@ -273,6 +276,17 @@
     }
     .gallery-item:hover img { transform: scale(1.04); }
 
+    /* More photos grid */
+    .gallery-more {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .gallery-more .gallery-item { aspect-ratio: 1/1; }
+    .gallery-more .gallery-item.wide { grid-column: span 2; aspect-ratio: 2/1; }
+    .gallery-more .gallery-item.tall { grid-column: span 1; aspect-ratio: 3/4; }
+
     /* ── REVIEW ── */
     .review-section {
       background: var(--green-dark);
@@ -428,6 +442,8 @@
         grid-template-columns: 1fr 1fr;
       }
       .gallery-grid .wide { grid-column: span 2; }
+      .gallery-more { grid-template-columns: repeat(2, 1fr); }
+      .gallery-more .gallery-item.wide { grid-column: span 2; }
       .about-inner { grid-template-columns: 1fr; gap: 36px; }
       .about-image { display: none; }
       .contact-grid { grid-template-columns: 1fr; }
@@ -437,6 +453,7 @@
       .gallery-grid { grid-template-columns: 1fr; }
       .gallery-grid .wide { grid-column: span 1; }
       .gallery-item.tall { aspect-ratio: 4/3; }
+      .gallery-more { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -445,7 +462,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-logo">
-      <div class="nav-icon">🌿</div>
+      <div class="nav-icon"><img src="logo.jpg" alt="Be There Lawncare logo"></div>
       <span class="nav-name">Be There Lawncare</span>
     </div>
     <ul class="nav-links">
@@ -544,6 +561,53 @@
         <div class="gallery-item">
           <img src="photo4.jpg" alt="Lawn care work" loading="lazy">
         </div>
+      </div>
+
+      <!-- Extended gallery — all photos -->
+      <div class="gallery-more">
+        <div class="gallery-item wide"><img src="photo5.jpg"  alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo6.jpg"  alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo7.jpg"  alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo8.jpg"  alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo9.jpg"  alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo10.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item wide"><img src="photo11.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo12.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo13.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo14.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo15.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item wide"><img src="photo16.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo17.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo18.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo19.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo20.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo21.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo22.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item wide"><img src="photo23.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo24.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo25.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo26.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo27.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item wide"><img src="photo28.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo29.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo30.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo31.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo32.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo33.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item wide"><img src="photo34.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo35.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo36.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo37.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo38.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo39.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item wide"><img src="photo40.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo41.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo42.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo43.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo44.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo45.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo46.jpg" alt="Lawn care work" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo47.jpg" alt="Lawn care work" loading="lazy"></div>
       </div>
     </div>
   </section>
